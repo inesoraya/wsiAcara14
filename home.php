@@ -110,7 +110,7 @@ if (!$currentUser) {
 </head>
 <body>
     <div class="home-container">
-        <h2>Welcome, <?php echo htmlspecialchars($currentUser['user_fullname']); ?></h2>
+        <h2>Selamat Datang, <?php echo htmlspecialchars($currentUser['user_fullname']); ?></h2>
         <p>Email: <?php echo htmlspecialchars($currentUser['user_email']); ?></p>
         <p>Level: <?php echo $currentUser['level'] == 1 ? 'Admin' : 'User'; ?></p>
         <a href="edit.php">Edit Profile</a>
@@ -120,10 +120,10 @@ if (!$currentUser) {
             <h3>Daftar Pengguna</h3>
             <table>
                 <tr>
-                    <th>ID</th>
+                    <th>No</th>
                     <th>Email</th>
-                    <th>Fullname</th>
-                    <th>Action</th>
+                    <th>Nama</th>
+                    <th>Aksi</th>
                 </tr>
                 <?php
                 $users = $user->getAllUsers();
@@ -135,7 +135,7 @@ if (!$currentUser) {
                     <td><?php echo htmlspecialchars($row['user_fullname']); ?></td>
                     <td class="action-links">
                         <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
-                        <a href="hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
+                        <a href="hapus.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Apakah Anda Yakin?')">Hapus</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
