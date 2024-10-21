@@ -114,7 +114,7 @@ if (!$currentUser) {
         <p>Email: <?php echo htmlspecialchars($currentUser['user_email']); ?></p>
         <p>Level: <?php echo $currentUser['level'] == 1 ? 'Admin' : 'User'; ?></p>
         <a href="edit.php">Edit Profile</a>
-        <a href="logout.php">Logout</a>
+        <a href="logout.php">Keluar</a>
 
         <?php if ($currentUser['level'] == 1): ?>
             <h3>Daftar Pengguna</h3>

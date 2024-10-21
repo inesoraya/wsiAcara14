@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="submit" value="Login">
         </form>
         <div class="register-link">
-            <p>Belum punya akun? <a href="register.php">Daftar disini</a></p>
+            <p>Belum Memiliki Akun? <a href="register.php">Daftar</a></p>
         </div>
     </div>
 </body>
