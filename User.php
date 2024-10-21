@@ -3,7 +3,7 @@ require_once 'koneksi.php';
 
 class User extends koneksi {
     public function register($email, $password, $fullname, $level = 2) {
-        $password = md5($password); // Note: MD5 is not secure, use password_hash() in production
+        $password = md5($password); 
         
         $check_level = $this->koneksi->query("SELECT * FROM level_detail WHERE id_level = $level");
         if ($check_level->num_rows == 0) {
@@ -21,7 +21,7 @@ class User extends koneksi {
     }
 
     public function login($email, $password) {
-        $password = md5($password); // Note: MD5 is not secure, use password_verify() in production
+        $password = md5($password); 
         
         $stmt = $this->koneksi->prepare("SELECT * FROM user_detail WHERE user_email = ? AND user_password = ?");
         $stmt->bind_param("ss", $email, $password);
